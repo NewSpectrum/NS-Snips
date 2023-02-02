@@ -1,0 +1,29 @@
+{
+	"description": "Code Completion for Python",
+	"uuid": "42F1B1F8-959E-4CA0-A2F3-7C68E1EAB850",
+	
+	"completionSets": [
+		{
+			"name": "py.keywords.functions",
+			"defaultAppend": "",
+			"strings": [
+				{
+					"string": "function",
+					"append": "def ${1:FunctionName}():\n\t${2:# Statements}"
+				}
+			]
+		}
+	],
+	
+	"contexts": [
+		{
+			"description": "Functions",
+			"scope": "source.py",
+			"pattern": "(def|function)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"py.keywords.functions"
+			]
+		}
+	]
+}

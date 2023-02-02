@@ -1,0 +1,29 @@
+{
+	"description": "PowerShell Auto-Completion",
+	"uuid": "BEB64D2E-D3E3-44A6-B704-E14E25AFCA7D",
+	
+	"completionSets": [
+		{
+			"name": "ps1.keywords.logic.if",
+			"defaultAppend": "",
+			"strings": [
+				{
+					"string": "if basic",
+					"append": "if ( ${1:Condition} ) {\n\t${2:# Statements\n}"
+				}
+			]
+		}
+	],
+	
+	"contexts": [
+		{
+			"description": "Logical Statements",
+			"scope": "source.powershell - meta.scriptblock.powershell",
+			"pattern": "(if|switch)\\s?",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"ps1.keywords.logic.if"
+			]
+		}
+	]
+}

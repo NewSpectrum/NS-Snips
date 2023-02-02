@@ -1,0 +1,16 @@
+{
+	"uuid": "BDEB8223-9AC7-41F0-89ED-455B8631E9F3",
+	"category": "Shell Scripts",
+	"templates": [
+		{
+			"name": "Standard Bash Script",
+			"fileExtension": "sh",
+			"snippet": "#!\/bin\/bash\/env bash\n\n$0"
+		},
+		{
+			"name": "Blank Bash Function",
+			"fileExtension": "sh",
+			"snippet": "#!\/bin\/bash\/env bash\n\nfunction ${1:FunctionName} {\n\t${2:Process}\n}\n\n$0"
+		}
+	]
+}

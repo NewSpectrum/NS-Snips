@@ -1,0 +1,42 @@
+{
+	"description": "Auto-Colompletion Sets for ShellScripts.",
+	"uuid": "A49EE6B6-0EC0-4EFF-ACFC-C99F64F906F7",
+	
+	"completionSets": [
+		{
+			"name": "sh.keywords.logical.if",
+			"defaultAppend": "$COMPLETION",
+			
+			"strings": [
+				{
+					"string": "if-then",
+					"append": "if [[ ${1:Condition} ]]; then\n\t${2:# Statements}\nfi${0}"
+				}
+			]
+		},
+		{
+			"name": "sh.keywords.logical.case",
+			"defaultAppend": "",
+			
+			"strings": [
+				{ 
+					"string": "case",
+					"append": "case"
+				}
+			]
+		}
+	],
+	
+	"contexts": [
+		{
+			"name": "Logical Statements",
+			"scope": "source.shell - source",
+			"pattern": "(if|case)\\s?",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"sh.keywords.logical.if",
+				"sh.keywords.logical.case",
+			]
+		}
+	]
+}

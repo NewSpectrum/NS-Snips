@@ -1,0 +1,11 @@
+{
+	"uuid": "5AF91AFA-5C70-4297-8A74-8E7299A7D712",
+	"category": "Markdown",
+	"templates": [
+		{
+			"name": "Basic Wiki Page",
+			"fileExtension": "md",
+			"snippet": "# ${1:Page Title}\n \n${2:Intro & Summary}\n \n<br \/>\n \n## ${3:Sub-Section}\n \n[ Body Text ]\n\n\n<br \/><br \/>\n\n --- \n\n# ${4:Section Two}\n \n[ Body Text ]\n\n$0"
+		}
+	]
+}

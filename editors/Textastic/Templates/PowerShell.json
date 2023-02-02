@@ -1,0 +1,11 @@
+{
+	"uuid": "5FB77216-662D-4316-82D1-77833C10CFA8",
+	"category": "PowerShell",
+	"templates": [
+		{
+			"name": "Basic PowerShell Script",
+			"fileExtension": "ps1",
+			"snippet": "$Policy = $( Get-ExecutionPolicy )\nif ( $Policy -ne 'Bypass' -or 'Unrestricted' ) {\n\ttry {\n\t\tSet-ExecutionPolicy"
+		}
+	]
+}

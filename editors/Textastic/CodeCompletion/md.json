@@ -1,0 +1,22 @@
+{
+	"uuid": "DDFCA46B-ECEE-4017-A47D-AD14374130F0",
+	"description": "Markdown code completion sets",
+	
+	"completionSets": [
+		{
+			"name": "md.breaks.sections",
+			"scope": "text.md",
+			"defaultAppend": "$COMPLETION\n\n$0",
+			"strings": [
+				{
+					"string": "1break",
+					"append": "<br \/>\n\n$0"
+				},
+				{
+					"string": "2breaks",
+					"append": "<br \/><br \/>\n\n$0"
+				},
+			]
+		}
+	]
+}
