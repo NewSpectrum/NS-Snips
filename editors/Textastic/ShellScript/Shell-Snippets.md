@@ -35,3 +35,26 @@ Textastic, like most __[Code Editors](wiki)__ & __[IDEs](wiki)__, automatically 
 | :---     | :---             | :---    |
 | `bash.bashrc` | <pre><code class="language-shell">/etc/bash.bashrc</code></pre> | System-Wide __[Bash Shell Customization](wiki)__ |
 
+
+
+```bash
+function usage() {
+	cat <<- EOT
+
+  Usage: [options] [--] 
+
+  Options: 
+  -i | --interactive			Run interactive utility
+  -y | --youtube [url]			Download from YouTube links
+  -g | --google-drive [url]		Download from Google Drive
+  -o | --other-source [url]		Download from Google Drive
+  -a | --audio					Convert the video to an '.mp3' file
+  
+  -h | --help       			Display this message
+  -v | --version    			Display script version
+
+EOT
+}
+```
+
+https://github.com/NewSpectrum#:~:text=Hi%2C-,please,-be%20aware%20that
