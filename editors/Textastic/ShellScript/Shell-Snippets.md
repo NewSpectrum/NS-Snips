@@ -1,3 +1,8 @@
+<head>
+	<link id="prism-css" href="">
+</head>
+
+
 # Textastic `.sh` Snippets
 
 Create snippets for files using the UNIX `shellscript` Syntax.
@@ -24,7 +29,9 @@ Textastic, like most __[Code Editors](wiki)__ & __[IDEs](wiki)__, automatically 
 		- [Hidden System Files (UNIX)](wiki): `.filename.ext` or `.filename`
 		- Files without any extension, such as a [`Dockerfile`](wiki) used by [Docker](wiki) to build [Images](wiki)
 
+### Linux
+
 | Filename | Default Location | Purpose |
 | :---     | :---             | :---    |
-| `bash.bashrc` | <img src="https://simpleicons.org/icons/linux.svg" alt="Linux Logo" width="auto" height="16px"/> <pre>/etc/bash.bashrc</pre> | System-Wide __[Bash Shell Customization](wiki)__ |
+| `bash.bashrc` | <pre><code class="language-shell">/etc/bash.bashrc</code></pre> | System-Wide __[Bash Shell Customization](wiki)__ |
 
