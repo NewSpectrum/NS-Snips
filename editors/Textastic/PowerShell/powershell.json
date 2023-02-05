@@ -8,8 +8,8 @@
 			"defaultAppend": "",
 			"strings": [
 				{
-					"string": "if basic",
-					"append": "if ( ${1:Condition} ) {\n\t${2:# Statements\n}"
+					"string": "if",
+					"append": " ( ${1:Condition} ) {\n\t${2:# Statements} \n}$0"
 				}
 			]
 		}
@@ -19,7 +19,7 @@
 		{
 			"description": "Logical Statements",
 			"scope": "source.powershell - meta.scriptblock.powershell",
-			"pattern": "(if|switch)\\s?",
+			"pattern": "(if|switch)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"ps1.keywords.logic.if"
