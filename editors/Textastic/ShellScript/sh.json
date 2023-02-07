@@ -1,0 +1,69 @@
+{
+	"description": "Auto-Colompletion Sets for ShellScripts.",
+	"uuid": "A49EE6B6-0EC0-4EFF-ACFC-C99F64F906F7",
+	
+	"completionSets": [
+		{
+			"name": "sh.keywords.logical.if",
+			"defaultAppend": "$COMPLETION",
+			
+			"strings": [
+				{
+					"string": "if-then",
+					"append": "if [[ ${1:Condition} ]]; then\n\t${2:# Statements}\nfi${0}"
+				}
+			]
+		},
+		{
+			"name": "sh.keywords.logical.case",
+			"defaultAppend": "",
+			
+			"strings": [
+				{ 
+					"string": "case",
+					"append": " ${1:CaseScope} in "
+				}
+			]
+		},
+		
+		{
+			"name": "sh.keywords.declare.vars",
+			"defaultAppend": "",
+			
+			"strings": [
+				{ 
+					"string": "\$\{",
+					"append": "${1:VarName}\}"
+				},
+				{ 
+					"string": "=\"\$\{",
+					"append": "${1:VarName}\}\""
+				},
+			]
+		},
+	],
+	
+	"contexts": [
+		{
+			"name": "Logical Statements",
+			"scope": "source.shell",
+			"pattern": "(if|case)\\s?",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"sh.keywords.logical.if",
+				"sh.keywords.logical.case",
+			]
+		},
+		{
+			"name": "Variables & Declarations",
+			"scope": "source.shell - ",
+			"pattern": "(declare|\$\{|=\"\$\{|\[\")",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"sh.keywords.declare.vars",
+				"sh.keywords.declare.arrays",
+			]
+		}
+	]
+	
+}
