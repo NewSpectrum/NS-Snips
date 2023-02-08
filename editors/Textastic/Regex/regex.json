@@ -16,15 +16,15 @@
 		
 		{
 			"name": "re.capture.sets.ranges",
-			"defaultAppend": "[$COMPLETION]",
+			"defaultAppend": "",
 			"strings": [
-				"A-Z",
-				"a-z",
-				"0-9",
-				"A-Za-z",
-				"A-Z0-9",
-				"a-z0-9",
-				"A-Za-z0-9",
+				"[A-Z]",
+				"[a-z]",
+				"[0-9]",
+				"[A-Za-z]",
+				"[A-Z0-9]",
+				"[a-z0-9]",
+				"[A-Za-z0-9]",
 			]
 		}
 	],
@@ -32,8 +32,8 @@
 	"contexts": [
 		{
 			"description": "Capture Groups",
-			"scope": "source.regexp - meta.group.regexp",
-			"pattern": "(\\(\\W)",
+			"scope": "(source.regexp | meta.group.regexp)",
+			"pattern": "(\\(\\W*)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"re.capture.groups.labels"
@@ -41,8 +41,8 @@
 		},
 		{
 			"description": "Capture Sets",
-			"scope": "source.regexp - meta.set.regexp - meta.group.regexp - keyword.control.set.regexp",
-			"pattern": "(\\[([A-Za-z0-9]*))",
+			"scope": "(source.regexp | meta.set.regexp | meta.group.regexp)",
+			"pattern": "((\\(?\\[)([A-Za-z0-9]*))",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"re.capture.sets.ranges"
