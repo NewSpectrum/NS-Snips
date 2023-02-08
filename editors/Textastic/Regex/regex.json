@@ -12,17 +12,40 @@
 					"append": "${1:GroupName}_${2:00}>$0"
 				}
 			]
+		},
+		
+		{
+			"name": "re.capture.brackets.ranges",
+			"defaultAppend": "[$COMPLETION]",
+			"strings": [
+				"A-Z",
+				"a-z",
+				"0-9",
+				"A-Za-z",
+				"A-Z0-9",
+				"a-z0-9",
+				"A-Za-z0-9",
+			]
 		}
 	],
 	
 	"contexts": [
 		{
 			"description": "Capture Groups",
-			"scope": "source.regexp",
-			"pattern": "(\\(?\\W)",
+			"scope": "source.regexp - meta.group.regexp",
+			"pattern": "(\\(\\W)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"re.capture.groups.labels"
+			]
+		},
+		{
+			"description": "Capture Targets",
+			"scope": "source.regexp - meta.set.regexp",
+			"pattern": "(\\[([A-Za-z0-9]*))",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"re.capture.brackets.ranges"
 			]
 		}
 	]

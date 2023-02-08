@@ -19,7 +19,7 @@
 		{
 			"description": "Logical Statements",
 			"scope": "source.powershell - meta.scriptblock.powershell",
-			"pattern": "(if|switch)",
+			"pattern": "([a-z]+)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"ps1.keywords.logic.if"
