@@ -10,7 +10,7 @@
 			"strings": [
 				{
 					"string": "if-then",
-					"append": "if [[ ${1:Condition} ]]; then\n\t${2:# Statements}\nfi${0}"
+					"append": " [[ ${1:Condition} ]]; then\n\t${2:# Statements}\nfi${0}"
 				}
 			]
 		},
@@ -56,8 +56,8 @@
 		},
 		{
 			"name": "Variables & Declarations",
-			"scope": "source.shell - ",
-			"pattern": "(declare|\$\{|=\"\$\{|\[\")",
+			"scope": "source.shell - (string.quoted.double.shell|punctuation.definition.string.begin.shell|keyword.other.shell)",
+			"pattern": "((declare([\s](\-[Aagx])*)?[\s]?)?((\${)|([=]?[\"][\$][{])|([\[][\"])))",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"sh.keywords.declare.vars",

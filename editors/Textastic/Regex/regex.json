@@ -1,17 +1,6 @@
 {
-	"uuid": "3C8389A2-C5CF-404E-AB85-B7CF1D8BA8D5",
-	"category": "Category Name",
-	"templates": [
-		{
-			"name": "Template Name",
-			"fileExtension": "html",
-			"snippet": ""
-		}
-	]
-}
-{
 	"description": "Regex Auto-Completion",
-	"uuid": "BEB64D2E-D3E3-44A6-B704-E14E25AFCA7D",
+	"uuid": "3C8389A2-C5CF-404E-AB85-B7CF1D8BA8D5",
 	
 	"completionSets": [
 		{
@@ -20,7 +9,7 @@
 			"strings": [
 				{
 					"string": "?<",
-					"append": " ( ${1:Condition} ) {\n\t${2:# Statements} \n}$0"
+					"append": "${1:GroupName}_${2:00}>$0"
 				}
 			]
 		}
@@ -29,8 +18,8 @@
 	"contexts": [
 		{
 			"description": "Capture Groups",
-			"scope": "source.re",
-			"pattern": "(\W)",
+			"scope": "source.regexp",
+			"pattern": "(\\(?\\W)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"re.capture.groups.labels"
