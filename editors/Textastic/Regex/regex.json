@@ -15,7 +15,7 @@
 		},
 		
 		{
-			"name": "re.capture.brackets.ranges",
+			"name": "re.capture.sets.ranges",
 			"defaultAppend": "[$COMPLETION]",
 			"strings": [
 				"A-Z",
@@ -40,12 +40,12 @@
 			]
 		},
 		{
-			"description": "Capture Targets",
-			"scope": "source.regexp - meta.set.regexp",
+			"description": "Capture Sets",
+			"scope": "source.regexp - meta.set.regexp - meta.group.regexp - keyword.control.set.regexp",
 			"pattern": "(\\[([A-Za-z0-9]*))",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
-				"re.capture.brackets.ranges"
+				"re.capture.sets.ranges"
 			]
 		}
 	]
