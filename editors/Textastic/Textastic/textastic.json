@@ -1,0 +1,48 @@
+{
+	"description": "Auto-Completion for creating Textastic Snippets & Templates",
+	"uuid": "65B2501A-3060-42F2-A15A-DF7AADE3F66B",
+	
+	"completionSets": [
+		{
+			"name": "textastic.completion.sets",
+			"defaultAppend": "\"$COMPLETION",
+			"strings": [
+				{
+					"string": "\"name\": ",
+					"append": "\"${1:(ext).completion.set.name}\",\n\"defaultAppend\": \"${2:(leave blank if unsure)}\",\n\"strings\": [\n\t\"${3:Keyword}\", \/\/ For 'keyword-only' completions\n\t{\n\t\t\"string\": \"${4:Snippet Name/Trigger}\",\n\t\t\"append\": \"${5:Snippet}\", \/\/ This is ADDED to the trigger 'string'\n\t}\n]"
+				}
+			]
+		}
+	],
+	
+	"contexts": [
+		{
+			"description": "Full Set Blocks",
+			"scope": "source.json",
+			"pattern": "(\\W[A-Za-z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"textastic.completion.sets"
+			]
+		}
+	]
+}
+
+/*
+{
+	"sets": "",
+	"sets": // "set",
+{
+
+			// "name": "textastic.completion.sets",\n\t\t\t
+			// "defaultAppend": "{\n\t$COMPLETION\n}",\n\t\t\t
+			// "strings": [\n\t\t\t\t
+				// {\n\t\t\t\t\t
+					// "string": "name",\n\t\t\t\t\t
+					// "append": "json"\n\t\t\t\t
+				// }\n\t\t\t
+			// ]\n\t\t
+		},
+}
+
+*/
