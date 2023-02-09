@@ -1,0 +1,68 @@
+# snippets for making snippets :)
+#
+#
+#
+#######################
+#                     #
+#  - Full Snippets -  #
+#                     #
+#######################
+#
+snippet snip-basic | A minimal 'Snippet-Trigger' setup
+	snippet ${1:Trigger}
+		${0}
+snippet snip-category | A Snippet with a 'Category' section
+	snippet ${1:Trigger} [${2:Category}]
+		${0}
+snippet snip-extended | A Snippet with 'Category' & 'Description' sections
+	snippet ${1:Trigger} [${2:Category}] | ${3:Description}
+		${0}
+#
+#
+#
+############################
+#                          #
+#  - Snippet Components -  #
+#                          #
+############################
+#
+snippet $Num-Vars [Components] | Sets the next next tab location, sequentially.
+	${${1:Number}:${2:Default Value}}${0}
+snippet $Position-Num [Components] | Works in-tandem with 'Num-Var' sequence.
+	${${1:Number}}${0}
+#
+#
+#
+#############################
+#                           #
+#  - Formatting Snippets -  #
+#                           #
+#############################
+#
+snippet New-Section [Format] | New Section with a Title Block & '#' Padding
+	#
+	#
+	#
+	###########################
+	#                         #
+	#  - ${1:Section Title} -  #
+	#                         #
+	###########################
+	#
+	${0}
+snippet Sub-Section [Format] | Sub-Section with a Header & short '#' Padding
+	#
+	#
+	#  - ${1:Sub-Section Header}
+	${0}
+#
+#
+#
+#############################
+#                           #
+#  - Miscellaneous Items -  #
+#                           #
+#############################
+#
+snippet vis | I have no idea what this is for
+	{VISUAL}
